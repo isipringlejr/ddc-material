@@ -7,11 +7,15 @@ Basic Git Commands
 ==================
 git init = used to initalize empty git repo (directory) in /home/USER/repoName/.git/
 
-git status = 
+git status = prints the status of commits and files in repo 
 
-git add = 
+git add = moves code from the working area to the staging area 
+other command options 
+git add . 
+git add * 
 
-git commit = 
+git commit = commits changes 
+git -m "my first commit" 
 
 git merge = 
 
@@ -20,7 +24,27 @@ git rebase =
 git branch = 
 
 git show = prints what changes that happened in a particular commit (any commitID)
-  
+ 
+ 
+          Development: writing codes/software (this is how developers commit and change code)
+          ===================================================================================
+working-area  -->   staging-area  --> localRepo  -->   remoteRepo 
+
+app.java =  git add --> git commit -->  git push 
+
+Update author Identity (must be known):
+git config --global user.email "hr@landmarktech.com"
+git config --global user.name "Your Name"
+git config --global --list = to confirm the configs have been done 
+
+Commit Code steps: 
+1. git add .                --> moved from workingArea to StagingArea 
+2. git log 
+3. git commit -m "first commit"
+3. git show (to get the commit ID)
+
+
+
 
  
  
