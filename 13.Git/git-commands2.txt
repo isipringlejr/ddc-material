@@ -24,11 +24,13 @@ git rebase =
 git branch = 
 
 git show = prints what changes that happened in a particular commit (any commitID)
+
+git remote -v = 
  
  
           Development: writing codes/software (this is how developers commit and change code)
           ===================================================================================
-working-area  -->   staging-area  --> localRepo  -->   remoteRepo 
+               working-area  -->   staging-area  --> localRepo  -->   remoteRepo [gitHub]
 
 app.java =  git add --> git commit -->  git push 
 
@@ -42,6 +44,9 @@ Commit Code steps:
 2. git log 
 3. git commit -m "first commit"
 3. git show (to get the commit ID)
+4. git remote -v   
+4. git remote add aliasName repoURL.   
+
 
 
 
