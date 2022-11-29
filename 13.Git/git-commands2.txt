@@ -1,0 +1,27 @@
+Git 
+====
+Git tracks changes in files/codes/scripts 
+Git keep the records of old and new using a commitID (command "git show")
+
+Basic Git Commands 
+==================
+git init = used to initalize empty git repo (directory) in /home/USER/repoName/.git/
+
+git status = 
+
+git add = 
+
+git commit = 
+
+git merge = 
+
+git rebase = 
+
+git branch = 
+
+git show = prints what changes that happened in a particular commit (any commitID)
+  
+
+ 
+ 
+
