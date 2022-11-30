@@ -7,23 +7,31 @@ Basic Git Commands
 ==================
 git init = used to initalize empty git repo (directory) in /home/USER/repoName/.git/
 
-git status = prints the status of commits and files in repo 
+git status = used to track file locations
 
-git add = moves code from the working area to the staging area 
+git add = moves files from the working area to the staging area 
 
-git commit = commits changes to the localRepo 
-
-git merge = 
-
-git rebase = 
-
-git branch = 
+git commit - m=  moves files to the local repository from Staging Area (good commit message for tracking changes/author)
 
 git show = prints what changes that happened in a particular commit (any commitID)
 
 git remote -v = prints the remote repositiories in git 
 
 git push = moves code from the localRepo to Remote-Repo in SCM [GitHub/GitLab, ETC]
+
+git pull/fetch/clone = pulls the changes to the code from the remoteRepo to the localRepo 
+
+git log = list all commits 
+
+git show = shows changes that occured in a commit 
+
+git merge = 
+
+git fetch = 
+
+git rebase = 
+
+git branch = a git branch is a line of development 
  
  
           Development: writing codes/software (this is how developers commit and change code)
@@ -49,6 +57,8 @@ git commit -m "first commit"
 git show (to get the commit ID)
 git remote -v   
 git remote add aliasName repoURL
+git pull ts master 
+
 
 
 
