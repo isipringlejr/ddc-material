@@ -11,19 +11,21 @@ git status = used to track file locations
 
 git add = moves files from the working area to the staging area 
 
-git commit - m=  moves files to the local repository from Staging Area (good commit message for tracking changes/author)
+git commit - m =  moves files to the local repository from Staging Area (good commit message for tracking changes/author)
 
 git show = prints what changes that happened in a particular commit (any commitID)
 
-git remote -v = prints the remote repositiories in git 
+git remote -v = lists your aliases 
 
-git push = moves code from the localRepo to Remote-Repo in SCM [GitHub/GitLab, ETC]
+git push = moves changes in code to Remote-Repo in SCM [GitHub/GitLab, ETC]
 
 git pull/fetch/clone = pulls the changes to the code from the remoteRepo to the localRepo 
 
 git log = list all commits 
 
-git show = shows changes that occured in a commit 
+git show = shows changes that occured in a commit
+
+git branch = a git branch is a line of development 
 
 git merge = 
 
@@ -57,6 +59,7 @@ git commit -m "first commit"
 git show (to get the commit ID)
 git remote -v   
 git remote add aliasName repoURL
+git push aliasName branchName 
 git pull ts master 
 
 
