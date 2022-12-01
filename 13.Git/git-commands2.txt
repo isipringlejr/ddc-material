@@ -19,7 +19,7 @@ git remote -v = lists your aliases
 
 git push = moves changes in code to Remote-Repo in SCM [GitHub/GitLab, ETC]
 
-git pull = pulls the changes to the code from the remoteRepo to the localRepo 
+git pull = it brings changes in the code to the Working Area 
 
 git log = list all commits 
 
@@ -29,11 +29,11 @@ git branch = a git branch is a line of development
 
 git merge = allows you to add files to the remoteRepo and checking the differences from running the "git fetch" command 
 
-git fetch = allows you to review the changes from the remoteRepo pulled code 
+git fetch = it brings changes in the code to the LocalRepo 
 
 git diff = reviews the difference between what is in the remoteRepo and localRepo Master branch. Allows you to review what files/changes a developer has made 
 
-git clone = 
+git clone = it brings the entire code to the Working Area 
 
 git rebase = 
 
@@ -83,7 +83,95 @@ Intellij - not
 Front - End 
         VS Code 
         Atom
+Pycharm
 
+====================================================================================================
+.classpath 
+.project
+node_modules 
+
+Note: When developers are creating files/writing code. There are additional files that will be added 
+by using the IDEs. IDEs create these files and directories, but as a DevOps Engineer you can create 
+them manually if needed. 
+
+touch .classpath .project && mkdir node_modules 
+
+These files shouldn't be tracked by git because they are not apart of the project. In this case use 
+the ".gitignore" file. 
+
+             IQ: What is .gitignore file used for? 
+             Answer: This records files and dirs that shouldn't be tracked by git 
+           
+             IQ: If you don't want a file to be tracked by git what do you? 
+             Answer: use .gitignore 
+ 
+ .classpath 
+.project
+node_modules 
+
+1. Create a file  .gitignore 
+   touch .gitignore 
+   
+2. Move the 3 files into the .gitignore file 
+   mv .classpath .gitignore 
+   mv .project .gitignore 
+
+3. git add .
+4. git commit -m ".gitignore created"
+5. git push ts master 
+================================================================================================
+
+
+IQ: Which AtLassian tools have you used in your project?:
+=========================================================
+
+BitBucket ---> scm      = GitHub 
+Bamboo ---> CI/CD       = Jenkins 
+Jira ----> Ticketing tool = 
+Confluence ---> Documentation 
+
+
+
+Git Branching
+=============
+IQ: How many branches are you supporting? 
+
+Answer: 
+  Branches are used to create lines of development. A branch is a line development. 
+  
+  We maintain a minimum of 3 branches: 
+         development branch 
+         staging branch 
+         master branch 
+  Environments:
+        development branch = deploying to Dev ENV 
+        testing branch = deploys to Testing ENV 
+        testing branch = deploys to UAT(QA, BA) ENV
+        MASTER branch = code are deployed to PROD 
+        
+        
+ Command Legend: 
+ git branch = list all the branches [lines of development]
+ git branch branchName = create a new branch 
+ git checkout branchName = switches branches 
+ 
+ git branch 
+ git branch branchName
+ git checkout branchName 
+ git commit -a -m ts "comment"
+ git checkout branchName 
+ git diff branchName
+ git merge branchName m "reviewed and approved"
+ git diff branchName (nothing should show anything)
+ 
+ CONFLCT are resloved manually when gitting error. The error stems from not   merging changes immediately approving the "diff".
+ Note: Not best practice, merge all changes before switching branches. 
+    
+ 
+        
+        
+
+              
 
 
 
