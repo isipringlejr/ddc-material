@@ -74,71 +74,47 @@ git fetch aliasName branchName
 git diff aliasName/branchName
 git merge aliasName/branchName
 
-IDEs - Integrated Development Environments (developers use this to develop code)
 ================================================================================
+IDEs - Integrated Development Environments (developers use this to develop code)
+
 Eclipse - open source Java Based IDE 
 MyEclipse - not 
 NetBeans OS Heavy 
 Intellij - not 
 Front - End 
         VS Code 
-        Atom
-Pycharm
+        Atom 
+        Pycharm
 
-====================================================================================================
-.classpath 
-.project
-node_modules 
-
-Note: When developers are creating files/writing code. There are additional files that will be added 
-by using the IDEs. IDEs create these files and directories, but as a DevOps Engineer you can create 
-them manually if needed. 
-
-touch .classpath .project && mkdir node_modules 
-
-These files shouldn't be tracked by git because they are not apart of the project. In this case use 
+When developers are creating files/writing code. There are additional files that will be added by using the IDEs. IDEs create these files and directories, but as a DevOps Engineer you can create them manually if needed. These files shouldn't be tracked by git because they are not apart of the project. In this case use 
 the ".gitignore" file. 
 
-             IQ: What is .gitignore file used for? 
-             Answer: This records files and dirs that shouldn't be tracked by git 
-           
-             IQ: If you don't want a file to be tracked by git what do you? 
-             Answer: use .gitignore 
- 
  .classpath 
 .project
 node_modules 
 
-1. Create a file  .gitignore 
-   touch .gitignore 
-   
-2. Move the 3 files into the .gitignore file 
-   mv .classpath .gitignore 
-   mv .project .gitignore 
-
-3. git add .
-4. git commit -m ".gitignore created"
-5. git push ts master 
-================================================================================================
+1. vim .gitignore 
+2. touch .classpath .project && mkdir node_modules
+3. mv .classpath  .gitignore
+4. mv .project .gitignore
+5. git add .
+6. git commit -m ".gitignore created"
+7. git push ts master
 
 
 IQ: Which AtLassian tools have you used in your project?:
-=========================================================
 
 BitBucket ---> scm      = GitHub 
 Bamboo ---> CI/CD       = Jenkins 
 Jira ----> Ticketing tool = 
-Confluence ---> Documentation 
+Confluence ---> Documentation
+==================================================================================
 
+===============================================================================
+Git Branching = Branches are used to create lines of development. A branch is a line development. 
 
-
-Git Branching
-=============
 IQ: How many branches are you supporting? 
-
-Answer: 
-  Branches are used to create lines of development. A branch is a line development. 
-  
+Answer:  
   We maintain a minimum of 3 branches: 
          development branch 
          staging branch 
@@ -147,8 +123,7 @@ Answer:
         development branch = deploying to Dev ENV 
         testing branch = deploys to Testing ENV 
         testing branch = deploys to UAT(QA, BA) ENV
-        MASTER branch = code are deployed to PROD 
-        
+         master branch = code are deployed to PROD        
         
  Command Legend: 
  git branch = list all the branches [lines of development]
@@ -161,11 +136,17 @@ Answer:
  git commit -a -m ts "comment"
  git checkout branchName 
  git diff branchName
- git merge branchName m "reviewed and approved"
+ git merge branchName "reviewed and approved"
  git diff branchName (nothing should show anything)
  
- CONFLCT are resloved manually when gitting error. The error stems from not   merging changes immediately approving the "diff".
+ CONFLCT are resloved manually when gitting error. The error stems from not       
+ merging changes immediately approving the "diff".
+
  Note: Not best practice, merge all changes before switching branches. 
+ Steps to resolve conflict:
+ 1. vi fileName (effected file to resolve by removing the changes reflected)
+ 2. git commit -a -m "conflict is resolved"
+ ============================================================================
     
  
         
