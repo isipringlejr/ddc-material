@@ -50,9 +50,6 @@ git branch = a git branch is a line of development
                git merge 
                git pull  <--------------------------------------------------------------------
                       
-                       
-                        
-        
 
 Prequisite, update author Identity (must be known):
 ==================================================
@@ -74,7 +71,7 @@ git fetch aliasName branchName
 git diff aliasName/branchName
 git merge aliasName/branchName
 
-================================================================================
+================================================================================================================================
 IDEs - Integrated Development Environments (developers use this to develop code)
 
 Eclipse - open source Java Based IDE 
@@ -108,9 +105,9 @@ BitBucket ---> scm      = GitHub
 Bamboo ---> CI/CD       = Jenkins 
 Jira ----> Ticketing tool = 
 Confluence ---> Documentation
-==================================================================================
+==============================================================================================================================
 
-===============================================================================
+==============================================================================================================================
 Git Branching = Branches are used to create lines of development. A branch is a line development. 
 
 IQ: How many branches are you supporting? 
@@ -146,7 +143,7 @@ Answer:
  Steps to resolve conflict:
  1. vi fileName (effected file to resolve by removing the changes reflected)
  2. git commit -a -m "conflict is resolved"
- ============================================================================
+ ===============================================================================================================================
     
  
         
