@@ -211,6 +211,15 @@ bitbucket
 codeCommit 
 
 
+ IQ: 
+ Explain your branching strategy in LandmarkTechnology??
+ Explain your branching strategy in Dominion systems??
  
+ Answer: 
+ Branching is very important in Git, we use branching to create lines of development. Having a good branching strategy is important when it comes to software delivery, development, and quality. 
  
+In landmark we maintain a minimum of 3 branches -- staging, development, master. We makesure code from the development branch is deployed to the Dev Environment; code from the Stage Branch is deployed to the STAGE/uat/test/QA Environment; Master Branch code is deployed to the PRODUCTION Environment (delivered to customers).
 
+If we notice bugs in the code we create a bug fix branch is created from the master. Once the bug is removed we have to create a pull request for other members of the team to review. If everything is correct it will be merged in the master branch. 
+ 
+Similarly if the client wants us to add a new feature, we create the feature branch. The feature is created from the master branch and before it's merged there is a pull request. 
