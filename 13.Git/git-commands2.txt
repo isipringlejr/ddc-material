@@ -27,19 +27,38 @@ git show = shows changes that occured in a commit
 
 git branch = a git branch is a line of development 
 
-git merge = allows you to add files to the remoteRepo and checking the differences from running the "git fetch" command 
-
 git fetch = it brings changes in the code to the LocalRepo 
 
 git diff = reviews the difference between what is in the remoteRepo and localRepo Master branch. Allows you to review what files/changes a developer has made 
 
 git clone = it brings the entire code to the Working Area 
 
-git rebase = 
-
 git branch = a git branch is a line of development 
+
+ git branch -d branchName = delete branch 
+ 
+ git cherry-pick = used to merge specific commit in a branch 
+ 
+ git merge = used to review and merge changes to one branch to another branch. combines however many commits into one merge. 
+            git merge 
+                sc1-->sc2-->sc3-->sc4 = mc1 
+ 
+ git rebase = used to review and merge changes to one branch to another branch. Will separate each version/commit/changes by each               commit 
+               git rebase 
+                 sc1-->sc2-->sc3-->sc4 = mc1 
+                 = mc1-->mc2-->mc3-->mc4
  
  
+ git origin = allows you to push all the changes to all the branches 
+              origin = is the defualt aliasName created by git 
+              
+              git push origin --all 
+              git push aliasName --all 
+              git push aliasName master 
+              git push aliasName stabe 
+              git push aliasName development 
+
+
           Development: writing codes/software (this is how developers commit and change code)
           ===================================================================================
                working-area  -->   staging-area  --> localRepo  -->   remoteRepo [gitHub]
@@ -70,6 +89,8 @@ git pull aliasName branchName
 git fetch aliasName branchName 
 git diff aliasName/branchName
 git merge aliasName/branchName
+git cherry-pick commitID
+git rebase
 
 ================================================================================================================================
 IDEs - Integrated Development Environments (developers use this to develop code)
@@ -134,7 +155,9 @@ Answer:
  git checkout branchName 
  git diff branchName
  git merge branchName "reviewed and approved"
- git diff branchName (nothing should show anything)
+ git branch -d branchName 
+ git cherry-pick
+ git rebase 
  
  CONFLCT are resloved manually when gitting error. The error stems from not       
  merging changes immediately approving the "diff".
