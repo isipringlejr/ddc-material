@@ -1,3 +1,9 @@
+IQ: What is the difference between Git & Github?
+Answer: 
+Git is an open source DVS which records changes made to files (codes) laying emphasis on speed, data integrity in a distributed non-linear workflows. 
+
+GitHub is a hosted repo (UI) for git or an open source SCM tools
+
 Git 
 ====
 Git tracks changes in files/codes/scripts 
@@ -31,7 +37,7 @@ git fetch = it brings changes in the code to the LocalRepo
 
 git diff = reviews the difference between what is in the remoteRepo and localRepo Master branch. Allows you to review what files/changes a developer has made 
 
-git clone = it brings the entire code to the Working Area 
+git clone = it brings the entire code to the Working Area (user access the code for the first time)
 
 git branch = a git branch is a line of development 
 
@@ -57,6 +63,13 @@ git branch = a git branch is a line of development
               git push aliasName master 
               git push aliasName stabe 
               git push aliasName development 
+              
+git branch bug_fix_aaignee_jiraTicket# = removing bugs in the code landmark_145 = removing bugs in the code **created from the master branch**
+
+git branch feature_aaignee_jiraTicket# = branch for adding new features **created from the master branch**
+
+git tag = 
+
 
 
           Development: writing codes/software (this is how developers commit and change code)
@@ -91,6 +104,14 @@ git diff aliasName/branchName
 git merge aliasName/branchName
 git cherry-pick commitID
 git rebase
+git branch bug_fix_landmark 
+
+git push origin --all 
+              git push aliasName --all 
+              git push aliasName master 
+              git push aliasName stabe 
+              git push aliasName development 
+
 
 ================================================================================================================================
 IDEs - Integrated Development Environments (developers use this to develop code)
