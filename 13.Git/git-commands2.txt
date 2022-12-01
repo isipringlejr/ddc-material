@@ -19,7 +19,7 @@ git remote -v = lists your aliases
 
 git push = moves changes in code to Remote-Repo in SCM [GitHub/GitLab, ETC]
 
-git pull/fetch/clone = pulls the changes to the code from the remoteRepo to the localRepo 
+git pull = pulls the changes to the code from the remoteRepo to the localRepo 
 
 git log = list all commits 
 
@@ -27,9 +27,13 @@ git show = shows changes that occured in a commit
 
 git branch = a git branch is a line of development 
 
-git merge = 
+git merge = allows you to add files to the remoteRepo and checking the differences from running the "git fetch" command 
 
-git fetch = 
+git fetch = allows you to review the changes from the remoteRepo pulled code 
+
+git diff = reviews the difference between what is in the remoteRepo and localRepo Master branch. Allows you to review what files/changes a developer has made 
+
+git clone = 
 
 git rebase = 
 
@@ -41,7 +45,12 @@ git branch = a git branch is a line of development
                working-area  -->   staging-area  --> localRepo  -->   remoteRepo [gitHub]
                untracked files     git add           git commit       git push        
                red                 green 
-                        app.java =  git add --> git commit -->  git push 
+               
+               git fetch                             <-----------------------------------   
+               git merge 
+               git pull  <--------------------------------------------------------------------
+                      
+                       
                         
         
 
@@ -60,7 +69,20 @@ git show (to get the commit ID)
 git remote -v   
 git remote add aliasName repoURL
 git push aliasName branchName 
-git pull ts master 
+git pull aliasName branchName 
+git fetch aliasName branchName 
+git diff aliasName/branchName
+git merge aliasName/branchName
+
+IDEs - Integrated Development Environments (developers use this to develop code)
+================================================================================
+Eclipse - open source Java Based IDE 
+MyEclipse - not 
+NetBeans OS Heavy 
+Intellij - not 
+Front - End 
+        VS Code 
+        Atom
 
 
 
