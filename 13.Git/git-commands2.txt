@@ -68,9 +68,21 @@ git branch bug_fix_aaignee_jiraTicket# = removing bugs in the code landmark_145 
 
 git branch feature_aaignee_jiraTicket# = branch for adding new features **created from the master branch**
 
-git tag = 
+git tag:created only from the master branch . Tags are created for releases after a production cycle. When we use a tag we create a production release. 
 
+difference b/w tags and brnaches 
+=====Tags                              =====Branches 
+immutable (can't modify)               mutable
+unmodifiable                           modifiable 
+After PROD                             development-WIP
+Master Recommended                     any branch 
 
+git tag twitter-v1.0.2
+1 --> higher version 
+0 --> lower version 
+2 --> patch 
+
+git head = is a pointer that points to the current branch and latest commit 
 
           Development: writing codes/software (this is how developers commit and change code)
           ===================================================================================
@@ -111,6 +123,9 @@ git push origin --all
               git push aliasName master 
               git push aliasName stabe 
               git push aliasName development 
+              
+git tag tagName 
+git push aliasName tag tagName 
 
 
 ================================================================================================================================
@@ -188,15 +203,12 @@ Answer:
  1. vi fileName (effected file to resolve by removing the changes reflected)
  2. git commit -a -m "conflict is resolved"
  ===============================================================================================================================
-    
- 
-        
-        
 
-              
-
-
-
+SCM: 
+gitHub
+gitLab 
+bitbucket 
+codeCommit 
 
 
  
