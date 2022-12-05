@@ -234,7 +234,39 @@ Answer:
  1. vi fileName (effected file to resolve by removing the changes reflected)
  2. git commit -a -m "conflict is resolved"
  ===============================================================================================================================
+ 
+ ===============================================================================================================================
+ SSH Keys:
+ cat ~/.shh/id_rsa.pub
+ ssh -T git@github.com
+ ssh-keygen
+ ssh-keygen -t dsa
+ ls -la ~/.ssh
+        id_rsa                private 
+        id_rsa.pub            public
+        known_hosts           hosts credentials 
+        
+ssh uses RSA encryption algorithm default. 
+ 
+ 
+ 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=========================================================================================================================
 SCM: 
 gitHub
 gitLab 
