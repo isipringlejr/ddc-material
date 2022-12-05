@@ -223,3 +223,5 @@ In landmark we maintain a minimum of 3 branches -- staging, development, master.
 If we notice bugs in the code we create a bug fix branch is created from the master. Once the bug is removed we have to create a pull request for other members of the team to review. If everything is correct it will be merged in the master branch. 
  
 Similarly if the client wants us to add a new feature, we create the feature branch. The feature is created from the master branch and before it's merged there is a pull request. 
+
+
