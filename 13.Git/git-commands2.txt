@@ -27,6 +27,14 @@ git push = moves changes in code to Remote-Repo in SCM [GitHub/GitLab, ETC]
 
 git pull = it brings changes in the code to the Working Area 
 
+git stash = take backup 
+
+git stash list = to view backups 
+
+git stash apply = resume wip (work in progress) for the recent backup
+
+git stash pop stash@{0} = it will apply & drop backup 1. 
+
 git log = list all commits 
 
 git show = shows changes that occured in a commit
@@ -41,9 +49,11 @@ git clone = it brings the entire code to the Working Area (user access the code 
 
 git branch = a git branch is a line of development 
 
- git branch -d branchName = delete branch 
+git branch -d branchName = delete branch 
+
+git checkout -b branchName = will create a branch and move developer into the branch that was created 
  
- git cherry-pick = used to merge specific commit in a branch 
+git cherry-pick = used to merge specific commit in a branch. Choose a commit from one branch and apply it onto another
  
  git merge = used to review and merge changes to one branch to another branch. combines however many commits into one merge. 
             git merge 
@@ -64,6 +74,10 @@ git branch = a git branch is a line of development
               git push aliasName stabe 
               git push aliasName development 
               
+ git head = is a pointer that points to the current branch and latest commit 
+ 
+ git clean -f = delete all files in the WA (working area)
+              
 git branch bug_fix_aaignee_jiraTicket# = removing bugs in the code landmark_145 = removing bugs in the code **created from the master branch**
 
 git branch feature_aaignee_jiraTicket# = branch for adding new features **created from the master branch**
@@ -82,7 +96,6 @@ git tag twitter-v1.0.2
 0 --> lower version 
 2 --> patch 
 
-git head = is a pointer that points to the current branch and latest commit 
 
           Development: writing codes/software (this is how developers commit and change code)
           ===================================================================================
@@ -93,6 +106,8 @@ git head = is a pointer that points to the current branch and latest commit
                git fetch                             <-----------------------------------   
                git merge 
                git pull  <--------------------------------------------------------------------
+
+
                       
 
 Prequisite, update author Identity (must be known):
@@ -114,7 +129,7 @@ git pull aliasName branchName
 git fetch aliasName branchName 
 git diff aliasName/branchName
 git merge aliasName/branchName
-git cherry-pick commitID
+git cherry-pick <commitID>
 git rebase
 git branch bug_fix_landmark 
 
@@ -126,6 +141,22 @@ git push origin --all
               
 git tag tagName 
 git push aliasName tag tagName 
+
+git stash 
+git stash list 
+git stash apply 
+git stash apply stash@{0}
+git stash drop stash@{10}
+git stash pop stash@{1}
+git stash pop stash@{1}
+
+git clean -f 
+
+git checkout -b branchName 
+
+
+
+
 
 
 ================================================================================================================================
@@ -224,4 +255,9 @@ If we notice bugs in the code we create a bug fix branch is created from the mas
  
 Similarly if the client wants us to add a new feature, we create the feature branch. The feature is created from the master branch and before it's merged there is a pull request. 
 
+
+IQ: When should I use fetch, clone, and pull 
+Answer: 
+If you're already working on a project, then you're going to use either git fetch or git pull it will copy the changes from the remoteRepo into the localRepo. 
+If you're new to the project then you will use git clone. 
 
