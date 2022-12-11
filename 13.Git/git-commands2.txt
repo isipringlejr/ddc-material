@@ -59,7 +59,7 @@ git cherry-pick = used to merge specific commit in a branch. Choose a commit fro
             git merge 
                 sc1-->sc2-->sc3-->sc4 = mc1 
  
- git rebase = used to review and merge changes to one branch to another branch. Will separate each version/commit/changes by each               commit 
+ git rebase = used to review and merge changes to one branch to another branch. Will separate each version/commit/changes by each                   commit 
                git rebase 
                  sc1-->sc2-->sc3-->sc4 = mc1 
                  = mc1-->mc2-->mc3-->mc4
@@ -78,11 +78,11 @@ git cherry-pick = used to merge specific commit in a branch. Choose a commit fro
  
  git clean -f = delete all files in the WA (working area)
               
-git branch bug_fix_aaignee_jiraTicket# = removing bugs in the code landmark_145 = removing bugs in the code **created from the master branch**
+ git branch bug_fix_aaignee_jiraTicket# = removing bugs in the code landmark_145 = removing bugs in the code **created from the master branch**
 
-git branch feature_aaignee_jiraTicket# = branch for adding new features **created from the master branch**
+ git branch feature_aaignee_jiraTicket# = branch for adding new features **created from the master branch**
 
-git tag:created only from the master branch . Tags are created for releases after a production cycle. When we use a tag we create a production release. 
+ git tag:created only from the master branch . Tags are created for releases after a production cycle. When we use a tag we create a production  release. 
 
 difference b/w tags and brnaches 
 =====Tags                              =====Branches 
@@ -107,8 +107,7 @@ git tag twitter-v1.0.2
                git merge 
                git pull  <--------------------------------------------------------------------
 
-
-                      
+                     
 
 Prequisite, update author Identity (must be known):
 ==================================================
@@ -153,9 +152,6 @@ git stash pop stash@{1}
 git clean -f 
 
 git checkout -b branchName 
-
-
-
 
 
 
@@ -253,6 +249,32 @@ PAT
    Use to control access 
    Use to access GitHub account instead of password 
 We can generate multiple PAT with different level of access 
+================================================================================================================================
+Git Summary: 
+============
+
+Git is a distributed versions control system. We use git for Versioning in our projects. 
+
+Git keeps/records changes made in codes/files/scripts. 
+
+Basic Concepts: 
+    1. git installation 
+         yum install git 
+    2. git commands 
+         git [init/add/commit -m/status]
+         git pull/fetch/clone
+    3. git branch 
+         versioning is managed by git branches. Branch = line of development 
+         git branches = DEV/STAGE/MASTER 
+            git branch branchName (create)
+            git branch -d branchName (delete)
+            git checkout -b branchName (create and switch)
+            git checkout branchName
+    4. git tag
+            
+    5. git merge 
+    
+
 ================================================================================================================================
 
 Use this coomand to change the most recent Git commit message:
