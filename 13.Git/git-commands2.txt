@@ -261,7 +261,7 @@ Use this coomand to change the most recent Git commit message:
      
 Use this command to view the engineers commmits 
     git log --author="authorName"
- 
+
  
  
 ================================================================================================================================
@@ -310,6 +310,49 @@ Answer:
          Feature 
          
    Minium we maintain 3 branches -- DEV, STAGE, DEV. On top of Master if there's an issue we create a BugFix branch. If the client wants a particular    feature/modification we create a feature branch. 
+   
+   
+   IQ:
+   What is a README.md file
+   Answer: 
+   Often the first item a Developer will see in the repo. Typically include: 
+   
+  - What the project does 
+  - Why the project is useful
+  - Where users can get help with your project 
+  - Who maintains and contributes to the project 
+  
+  Getting Started 
+  Instructions will get you a copy of the project up and running on your local machine for development and testing. See deployment for notes on how     to deploy the project on a live system. 
+  
+  Prerequisites 
+  What things you need to install the software and how to install them Give examples 
+  
+  Installing 
+  A step by step series of examples that tell you how to get a development env running. Say what the steps will be 
+  
+  Running the tests 
+  Explain how to run the automated tests for this system 
+  
+  Deployment 
+  Add additional notes about how to deploy this on a live system 
+  
+  Versioning 
+  Use versions for each release and keep track of versions 
+  
+  Authors 
+  Add here authors name 
+  
+  License 
+  add license here 
+  
+  Git Best Practices:
+  Use branching strategy and pull requests
+  Commit once you finish the task. Avoid merge commits
+  Don't Commit Half-done Work Test your code before commit 
+  Write Good Commit Messages before you are commiting try to use git commands rather than GUI
+  
+  
 
 
 
