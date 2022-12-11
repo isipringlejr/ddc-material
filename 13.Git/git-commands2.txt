@@ -253,33 +253,27 @@ PAT
    Use to control access 
    Use to access GitHub account instead of password 
 We can generate multiple PAT with different level of access 
+================================================================================================================================
+
+Use this coomand to change the most recent Git commit message:
+       git commit --amend -m "an updated commit message"
+     
+     
+Use this command to view the engineers commmits 
+    git log --author="authorName"
  
  
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=========================================================================================================================
+================================================================================================================================
+IQ: 
+What are other SCM
+Answer: 
 SCM: 
 gitHub
 gitLab 
 bitbucket 
 codeCommit 
-
-
+ 
  IQ: 
  Explain your branching strategy in LandmarkTechnology??
  Explain your branching strategy in Dominion systems??
@@ -298,4 +292,19 @@ IQ: When should I use fetch, clone, and pull
 Answer: 
 If you're already working on a project, then you're going to use either git fetch or git pull it will copy the changes from the remoteRepo into the localRepo. 
 If you're new to the project then you will use git clone. 
+
+IQ:
+What is the difference between git commit and git rebase 
+Answer: 
+Git merge = merges commits together into to one commit 
+Git rebase = merge commits independently 
+
+IQ:
+What are the best branching strategy 
+Answer: 
+   Development 
+   Staging 
+   Master 
+
+
 
