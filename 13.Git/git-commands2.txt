@@ -237,16 +237,22 @@ Answer:
  
  ===============================================================================================================================
  SSH Keys:
- cat ~/.shh/id_rsa.pub
+ cat ~/.ssh/id_rsa.pub (verifies if the keys are available)
  ssh -T git@github.com
  ssh-keygen
  ssh-keygen -t dsa
  ls -la ~/.ssh
         id_rsa                private 
         id_rsa.pub            public
-        known_hosts           hosts credentials 
+        known_hosts           hosts validated credentials 
         
 ssh uses RSA encryption algorithm default. 
+
+PAT
+   Used to manage the GitHubAPI resources 
+   Use to control access 
+   Use to access GitHub account instead of password 
+We can generate multiple PAT with different level of access 
  
  
  
