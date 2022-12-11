@@ -302,9 +302,14 @@ Git rebase = merge commits independently
 IQ:
 What are the best branching strategy 
 Answer: 
-   Development 
-   Staging 
-   Master 
+  
+   Development --> deploy to DEV ENV
+   Staging --> deploy to UAT/Testing/QA (Pre-PROD)
+   Master --> deploy PROD ENV
+         Bugfix --> bugfix_bugNAME
+         Feature 
+         
+   Minium we maintain 3 branches -- DEV, STAGE, DEV. On top of Master if there's an issue we create a BugFix branch. If the client wants a particular    feature/modification we create a feature branch. 
 
 
 
