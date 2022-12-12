@@ -330,9 +330,9 @@ gitLab
 bitbucket 
 codeCommit 
  
- IQ: 
- Explain your branching strategy in LandmarkTechnology??
- Explain your branching strategy in Dominion systems??
+IQ: 
+Explain your branching strategy in LandmarkTechnology??
+Explain your branching strategy in Dominion systems??
  
 Answer: 
 Branching is very important in Git, we use branching to create lines of   development. Having a good branching strategy is important when it comes to software delivery, development, and quality. 
