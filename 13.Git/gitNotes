@@ -110,9 +110,20 @@ Development: writing codes/software (this is how developers commit and change co
                git fetch                             <-----------------------------------   
                git merge 
                git pull  <--------------------------------------------------------------------
+               
+Development backup commands
+===========================
+git clean/revert/reset/diff
 
-                     
-
+ working-area     staging-area         localRepo     remoteRepo [gitHub]
+ untracked files     git add           git commit       git push        
+  red                 green 
+  
+  git clean
+  <-------------------git reset
+  <-----------------------------------git revert cID
+  
+  
 Prequisite, update author Identity (must be known):
 ==================================================
 git config --global user.email "hr@landmarktech.com"
