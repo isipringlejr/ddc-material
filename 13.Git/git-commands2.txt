@@ -1,6 +1,3 @@
-IQ: What is the difference between Git & Github?
-Answer: 
-Git is an open source DVS which records changes made to files (codes) laying emphasis on speed, data integrity in a distributed non-linear workflows. 
 
 GitHub is a hosted repo (UI) for git or an open source SCM tools
 
@@ -74,18 +71,26 @@ git cherry-pick = used to merge specific commit in a branch. Choose a commit fro
               git push aliasName stabe 
               git push aliasName development 
               
- git head = is a pointer that points to the current branch and latest commit 
+git head = is a pointer that points to the current branch and latest commit 
  
- git clean -f = delete all files in the WA (working area)
+git clean -f = delete all files in the WA (working area)
               
- git branch bug_fix_aaignee_jiraTicket# = removing bugs in the code landmark_145 = removing bugs in the code **created from the master branch**
+git branch bug_fix_aaignee_jiraTicket# = removing bugs in the code landmark_145 = removing bugs in the code **created from the master branch**
 
- git branch feature_aaignee_jiraTicket# = branch for adding new features **created from the master branch**
+git branch feature_aaignee_jiraTicket# = branch for adding new features **created from the master branch**
 
- git tag:created only from the master branch . Tags are created for releases after a production cycle. When we use a tag we create a production  release. 
+git tag:created only from the master branch . Tags are created for releases after a production cycle. When we use a tag we create a production  release. 
+ 
+git commit --amend -m "an updated commit message" = Use this coomand to change the most recent Git commit message
+       
+git log --author="authorName" = Use this command to view the engineers commmits 
+ 
 
-difference b/w tags and brnaches 
-=====Tags                              =====Branches 
+difference b/w tags and brnaches:
+================================
+
+Tags                                   Branches 
+====                                   ========
 immutable (can't modify)               mutable
 unmodifiable                           modifiable 
 After PROD                             development-WIP
@@ -97,9 +102,8 @@ git tag twitter-v1.0.2
 2 --> patch 
 
 
-          Development: writing codes/software (this is how developers commit and change code)
-          ===================================================================================
-               working-area  -->   staging-area  --> localRepo  -->   remoteRepo [gitHub]
+Development: writing codes/software (this is how developers commit and change code)  ===================================================================================
+          working-area  -->   staging-area  --> localRepo  -->   remoteRepo [gitHub]
                untracked files     git add           git commit       git push        
                red                 green 
                
@@ -153,9 +157,33 @@ git clean -f
 
 git checkout -b branchName 
 
+Command syntax legend: 
+====================== 
+ git branch = list all the branches [lines of development]
+ git branch branchName = create a new branch 
+ git checkout branchName = switches branches 
+ git branch 
+ git branch branchName
+ git checkout branchName 
+ git commit -a -m ts "comment"
+ git checkout branchName 
+ git diff branchName
+ git merge branchName "reviewed and approved"
+ git branch -d branchName 
+ git cherry-pick
+ git rebase 
+ git branch push branchAlias --all = push all branches created CLI to remote repo
+ 
+ CONFLCT are resloved manually when gitting error. The error stems from not       
+ merging changes immediately approving the "diff".
 
-================================================================================================================================
+ Note: Not best practice, merge all changes before switching branches. 
+ Steps to resolve conflict:
+ 1. vi fileName (effected file to resolve by removing the changes reflected)
+ 2. git commit -a -m "conflict is resolved"
+
 IDEs - Integrated Development Environments (developers use this to develop code)
+================================================================================
 
 Eclipse - open source Java Based IDE 
 MyEclipse - not 
@@ -182,57 +210,18 @@ node_modules
 7. git push ts master
 
 
-IQ: Which AtLassian tools have you used in your project?:
+Git Branching 
+============= 
+Branches are used to create lines of development. A branch is a line development. 
 
-BitBucket ---> scm      = GitHub 
-Bamboo ---> CI/CD       = Jenkins 
-Jira ----> Ticketing tool = 
-Confluence ---> Documentation
-==============================================================================================================================
-
-==============================================================================================================================
-Git Branching = Branches are used to create lines of development. A branch is a line development. 
-
-IQ: How many branches are you supporting? 
-Answer:  
-  We maintain a minimum of 3 branches: 
-         development branch 
-         staging branch 
-         master branch 
   Environments:
         development branch = deploying to Dev ENV 
         testing branch = deploys to Testing ENV 
         testing branch = deploys to UAT(QA, BA) ENV
-         master branch = code are deployed to PROD        
+        master branch = code are deployed to PROD        
         
- Command Legend: 
- git branch = list all the branches [lines of development]
- git branch branchName = create a new branch 
- git checkout branchName = switches branches 
- 
- git branch 
- git branch branchName
- git checkout branchName 
- git commit -a -m ts "comment"
- git checkout branchName 
- git diff branchName
- git merge branchName "reviewed and approved"
- git branch -d branchName 
- git cherry-pick
- git rebase 
- git branch push branchAlias --all = push all branches created CLI to remote repo
- 
- CONFLCT are resloved manually when gitting error. The error stems from not       
- merging changes immediately approving the "diff".
-
- Note: Not best practice, merge all changes before switching branches. 
- Steps to resolve conflict:
- 1. vi fileName (effected file to resolve by removing the changes reflected)
- 2. git commit -a -m "conflict is resolved"
- ===============================================================================================================================
- 
- ===============================================================================================================================
  SSH Keys:
+ =========
  cat ~/.ssh/id_rsa.pub (verifies if the keys are available)
  ssh -T git@github.com
  ssh-keygen
@@ -249,15 +238,15 @@ PAT
    Use to control access 
    Use to access GitHub account instead of password 
 We can generate multiple PAT with different level of access 
-================================================================================================================================
+
 Git Summary: 
 ============
-
 Git is a distributed versions control system. We use git for Versioning in our projects. 
 
 Git keeps/records changes made in codes/files/scripts. 
 
 Basic Concepts: 
+===============
     1. git installation 
          yum install git [RedHAT/centos]
          apt install git [unbuntu and debian]
@@ -284,23 +273,56 @@ Basic Concepts:
     6. pull requests (PR)
     
     7. git fetch
-    
-    
 
-================================================================================================================================
 
-Use this coomand to change the most recent Git commit message:
-       git commit --amend -m "an updated commit message"
-     
-     
-Use this command to view the engineers commmits 
-    git log --author="authorName"
+HTTP Status Codes:
+==================
+GET | PUT | DELETE | POST 
 
+1xx = Informational 
+    100 Continue 
+    101 Switching Protocols 
+    102 Processing 
+2xx = Success
+    200 OK
+    201 Created 
+    202 Accepted 
+3xx = Redirection 
+    300 Multiple Choices 
+    301 Moved Permanetly 
+    302 Found 
+    303 See Other 
+4xx = Client Error 
+      400 Bad Request 
+      401 Unauthorized 
+      402 Payment Required 
+      403 Forbidden 
+      404 Not Found 
+      405 Method Not Allowed 
+      406 Not Acceptable 
+500 = Server Site Error 
+      500 Internal Server Error 
+      501 Not Implemented 
+      502 Bad Gateway 
+      503 Service Unavailable 
+      504 Gateway Timeout 
+https://httpstatuses.com/
  
- 
-================================================================================================================================
+Interview Questions
+====================
+
+IQ: Which AtLassian tools have you used in your project?
+
+Answer:
+BitBucket ---> scm      = GitHub 
+Bamboo ---> CI/CD       = Jenkins 
+Jira ----> Ticketing tool = 
+Confluence ---> Documentation
+
+
 IQ: 
-What are other SCM
+What are other SCM tools?
+
 Answer: 
 SCM: 
 gitHub
@@ -312,8 +334,8 @@ codeCommit
  Explain your branching strategy in LandmarkTechnology??
  Explain your branching strategy in Dominion systems??
  
- Answer: 
- Branching is very important in Git, we use branching to create lines of development. Having a good branching strategy is important when it comes to software delivery, development, and quality. 
+Answer: 
+Branching is very important in Git, we use branching to create lines of   development. Having a good branching strategy is important when it comes to software delivery, development, and quality. 
  
 In landmark we maintain a minimum of 3 branches -- staging, development, master. We makesure code from the development branch is deployed to the Dev Environment; code from the Stage Branch is deployed to the STAGE/uat/test/QA Environment; Master Branch code is deployed to the PRODUCTION Environment (delivered to customers).
 
@@ -321,20 +343,21 @@ If we notice bugs in the code we create a bug fix branch is created from the mas
  
 Similarly if the client wants us to add a new feature, we create the feature branch. The feature is created from the master branch and before it's merged there is a pull request. 
 
-
 IQ: When should I use fetch, clone, and pull 
+
 Answer: 
 If you're already working on a project, then you're going to use either git fetch or git pull it will copy the changes from the remoteRepo into the localRepo. 
 If you're new to the project then you will use git clone. 
 
 IQ:
 What is the difference between git commit and git rebase 
+
 Answer: 
 Git merge = merges commits together into to one commit 
 Git rebase = merge commits independently 
 
 IQ:
-What are the best branching strategy 
+What is the best branching strategy 
 Answer: 
   
    Development --> deploy to DEV ENV
@@ -343,65 +366,76 @@ Answer:
          Bugfix --> bugfix_bugNAME
          Feature 
          
-   Minium we maintain 3 branches -- DEV, STAGE, DEV. On top of Master if there's an issue we create a BugFix branch. If the client wants a particular    feature/modification we create a feature branch. 
+Minium we maintain 3 branches -- DEV, STAGE, DEV. On top of Master if there's an issue we create a BugFix branch. If the client wants a particular    feature/modification we create a feature branch. 
    
+IQ:
+What is a README.md file
    
-   IQ:
-   What is a README.md file
-   Answer: 
-   Often the first item a Developer will see in the repo. Typically include: 
+Answer: 
+Often the first item a Developer will see in the repo. Typically include: 
    
   - What the project does 
   - Why the project is useful
   - Where users can get help with your project 
   - Who maintains and contributes to the project 
   
-  Getting Started 
-  ===============
-  Instructions will get you a copy of the project up and running on your local machine for development and testing. See deployment for notes on how     to deploy the project on a live system. 
+Getting Started 
+================
+Instructions will get you a copy of the project up and running on your local   machine for development and testing. See deployment for notes on how to deploy the project on a live system. 
   
-  Prerequisites 
-  =============
-  What things you need to install the software and how to install them Give examples 
+Prerequisites 
+=============
+What things you need to install the software and how to install them Give examples 
   
-  Installing 
-  ==========
-  A step by step series of examples that tell you how to get a development env running. Say what the steps will be 
+Installing 
+==========
+A step by step series of examples that tell you how to get a development env running. Say what the steps will be 
   
-  Running the tests 
-  =================
-  Explain how to run the automated tests for this system 
+Running the tests 
+=================
+Explain how to run the automated tests for this system 
   
-  Deployment 
-  ==========
-  Add additional notes about how to deploy this on a live system 
+Deployment 
+==========
+Add additional notes about how to deploy this on a live system 
   
-  Versioning 
-  ==========
-  Use versions for each release and keep track of versions 
+Versioning 
+==========
+Use versions for each release and keep track of versions 
   
-  Authors 
-  =======
-  Add here authors name 
+Authors 
+=======
+Add here authors name 
   
-  License 
-  =======
-  add license here 
+License 
+=======
+add license here 
   
-  
-  Git Best Practices:
-  ===================
-  Use branching strategy and pull requests
-  Commit once you finish the task
-  Avoid merge commits
-  Don't Commit Half-done code/work - git stash 
-  Test your code before commit 
-  Write Good Commit Messages before you are commiting 
-  Try to use git commands rather than GUI tools
-  Use ssh url and PAT over https 
-  Use rebase over git merge 
-  
-  
+Git Best Practices
+===================
+Use branching strategy and pull requests
+Commit once you finish the task
+Avoid merge commits
+Don't Commit Half-done code/work - git stash 
+Test your code before commit 
+Write Good Commit Messages before you are commiting 
+Try to use git commands rather than GUI tools
+Use ssh url and PAT over https 
+Use rebase over git merge 
 
+IQ: What are some Client HTTP status code errors?
+4xx = Client Error 
+      400 Bad Request 
+      401 Unauthorized 
+      402 Payment Required 
+      403 Forbidden 
+      404 Not Found 
+      405 Method Not Allowed 
+      406 Not Acceptable 
+  
+IQ: 
+What is the difference between Git & Github?
 
+Answer: 
+Git is an open source DVS which records changes made to files (codes) laying emphasis on speed, data integrity in a distributed non-linear workflows. 
 
