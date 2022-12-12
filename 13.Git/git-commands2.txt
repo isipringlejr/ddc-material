@@ -220,6 +220,7 @@ Answer:
  git branch -d branchName 
  git cherry-pick
  git rebase 
+ git branch push branchAlias --all = push all branches created CLI to remote repo
  
  CONFLCT are resloved manually when gitting error. The error stems from not       
  merging changes immediately approving the "diff".
@@ -356,34 +357,49 @@ Answer:
   - Who maintains and contributes to the project 
   
   Getting Started 
+  ===============
   Instructions will get you a copy of the project up and running on your local machine for development and testing. See deployment for notes on how     to deploy the project on a live system. 
   
   Prerequisites 
+  =============
   What things you need to install the software and how to install them Give examples 
   
   Installing 
+  ==========
   A step by step series of examples that tell you how to get a development env running. Say what the steps will be 
   
   Running the tests 
+  =================
   Explain how to run the automated tests for this system 
   
   Deployment 
+  ==========
   Add additional notes about how to deploy this on a live system 
   
   Versioning 
+  ==========
   Use versions for each release and keep track of versions 
   
   Authors 
+  =======
   Add here authors name 
   
   License 
+  =======
   add license here 
   
+  
   Git Best Practices:
+  ===================
   Use branching strategy and pull requests
-  Commit once you finish the task. Avoid merge commits
-  Don't Commit Half-done Work Test your code before commit 
-  Write Good Commit Messages before you are commiting try to use git commands rather than GUI
+  Commit once you finish the task
+  Avoid merge commits
+  Don't Commit Half-done code/work - git stash 
+  Test your code before commit 
+  Write Good Commit Messages before you are commiting 
+  Try to use git commands rather than GUI tools
+  Use ssh url and PAT over https 
+  Use rebase over git merge 
   
   
 
