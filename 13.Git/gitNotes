@@ -130,6 +130,21 @@ git config --global user.email "hr@landmarktech.com"
 git config --global user.name "Your Name"
 git config --global --list = to confirm the configs have been done 
 
+visaRepo-url      = You Did 
+Group12Repo-url   = TeamLead [write]
+
+   mkdir visa && cd visa 
+     git init 
+     git remote add visa  visaRepo-url  
+     git push visa master      
+   mkdir group12 
+     git init 
+     git remote add g12 Group12Repo-url  
+     git branch dev_james
+     git push g12 dev_james  
+
+    git pull 
+    
 Commands to commit code versions to SCM in gitHub: 
 ==================================================
 git add .      /  git add *      
