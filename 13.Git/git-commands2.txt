@@ -154,7 +154,6 @@ git clean -f
 git checkout -b branchName 
 
 
-
 ================================================================================================================================
 IDEs - Integrated Development Environments (developers use this to develop code)
 
@@ -259,10 +258,16 @@ Git keeps/records changes made in codes/files/scripts.
 
 Basic Concepts: 
     1. git installation 
-         yum install git 
+         yum install git [RedHAT/centos]
+         apt install git [unbuntu and debian]
+         download microsoft installer file for git 
+                 Git-2.37.2.2-64-bit.exe
+                      git bash 
+         
     2. git commands 
          git [init/add/commit -m/status]
          git pull/fetch/clone
+         
     3. git branch 
          versioning is managed by git branches. Branch = line of development 
          git branches = DEV/STAGE/MASTER 
@@ -270,9 +275,15 @@ Basic Concepts:
             git branch -d branchName (delete)
             git checkout -b branchName (create and switch)
             git checkout branchName
+            
     4. git tag
             
     5. git merge 
+    
+    6. pull requests (PR)
+    
+    7. git fetch
+    
     
 
 ================================================================================================================================
